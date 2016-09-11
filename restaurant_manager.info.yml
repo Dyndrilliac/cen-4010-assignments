@@ -1,5 +1,5 @@
-name: Restaurant Management Module
-description: Creates a restaurant management sub-system for Drupal 8.
+name: Restaurant Management
+description: The goal of this project is to design and implement an efficient restaurant management sub-system module for the web-based Drupal content management system (CMS).
 package: Custom
 type: module
 version: 1.0.0
