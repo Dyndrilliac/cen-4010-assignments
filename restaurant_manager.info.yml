@@ -1,7 +1,11 @@
-name: Restaurant Management
+name: Restaurant Manager
 description: The goal of this project is to design and implement an efficient restaurant management sub-system module for the web-based Drupal content management system (CMS).
 package: Custom
+
 type: module
-version: 1.0.0
-core: 8.1.x
+core: 8.x
+
+configure: restaurant_manager.settings
+
+hidden: false
 
