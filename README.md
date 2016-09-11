@@ -9,3 +9,5 @@
 
 The goal of this project is to design and implement an efficient restaurant management sub-system module for the web-based Drupal content management system (CMS).
 
+This code is also mirrored on [Drupal.org](https://www.drupal.org/sandbox/dyndrilliac/2798295).
+
