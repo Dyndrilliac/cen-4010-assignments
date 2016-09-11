@@ -1,0 +1,7 @@
+name: Restaurant Management Module
+description: Creates a restaurant management sub-system for Drupal 8.
+package: Custom
+type: module
+version: 1.0.0
+core: 8.1.x
+

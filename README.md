@@ -7,3 +7,5 @@
 
 *******************************************************************
 
+The goal of this project is to design and implement an efficient restaurant management sub-system module for the web-based Drupal content management system (CMS).
+
