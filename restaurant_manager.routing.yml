@@ -2,7 +2,7 @@ restaurant_manager.admin.form:
   path: '/admin/config/workflow/restaurant_manager'
   defaults:
     _title: 'Restaurant Manager settings'
-    _form: '\Drupal\restaurant_manager\Form\RestaurantConfigurationForm'
+    _form: '\Drupal\restaurant_manager\Form\RestaurantManagerConfigurationForm'
   requirements:
     _permission: 'administer restaurant manager settings'
   options:
