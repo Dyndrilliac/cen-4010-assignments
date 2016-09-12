@@ -1,4 +1,4 @@
-administer restaurant settings:
-  title: 'Administer restaurant settings'
+administer restaurant manager settings:
+  title: 'Administer Restaurant Manager settings'
   description: 'Configure the settings for the Restaurant Manager module.'
   restrict access: true
