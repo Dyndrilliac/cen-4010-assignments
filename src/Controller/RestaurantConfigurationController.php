@@ -6,13 +6,12 @@
 
 namespace Drupal\restaurant_manager\Controller;
 
-use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Controller\BlockController;
+use Drupal\restaurant_manager\Plugin\Block\RestaurantNameBlock;
 
-class RestaurantConfigurationController extends ControllerBase {
+class RestaurantConfigurationController extends BlockController {
   public function content() {
-    return array(
-        '#type' => 'markup',
-        '#markup' => $this->t('Hello, Food!'),
-    );
+    $nameBlock = new RestaurantNameBlock();
+    return $nameBlock->build();
   }
 }
