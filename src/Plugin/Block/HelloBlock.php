@@ -40,7 +40,7 @@ class HelloBlock extends BlockBase {
   public function blockForm($form, FormStateInterface $form_state) {
     $form = parent::blockForm($form, $form_state);
 
-    $default_config = \Drupal::config('hello_world.settings');
+    $default_config = \Drupal::config('restaurant_manager.settings.yml');
     $config = $this->getConfiguration();
 
     $form['hello_block_settings'] = array (
