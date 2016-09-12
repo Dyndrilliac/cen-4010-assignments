@@ -1,7 +1,7 @@
 restaurant_manager.content:
   path: '/restaurant'
   defaults:
-    _controller: '\Drupal\restaurant_world\Controller\RestaurantController::content'
+    _controller: '\Drupal\restaurant_manager\Controller\RestaurantController::content'
     _title: 'Hello, Food!'
   requirements:
     _permission: 'access content'
