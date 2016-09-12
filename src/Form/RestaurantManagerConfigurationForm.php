@@ -5,17 +5,17 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Provides a 'Restaurant Manager config' form
+ * Provides a 'Restaurant Manager configuration' form
  *
  * @Form(
- *   id = "restaurant_manager_config_form",
- *   admin_label = @Translation("Restaurant Manager config form"),
+ *   id = "restaurant_manager_configuration_form",
+ *   admin_label = @Translation("Restaurant Manager configuration form"),
  * )
  */
-class RestaurantConfigurationForm extends FormBase {
+class RestaurantManagerConfigurationForm extends FormBase {
   public function getFormId() {
     // Unique ID of the form.
-    return 'restaurant_manager_config_form';
+    return 'restaurant_manager_configuration_form';
   }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
