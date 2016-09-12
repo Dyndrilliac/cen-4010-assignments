@@ -5,17 +5,17 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Provides a 'Restaurant Name' form
+ * Provides a 'Restaurant Manager config' form
  *
  * @Form(
- *   id = "restaurant_name_form",
- *   admin_label = @Translation("Restaurant Name form"),
+ *   id = "restaurant_manager_config_form",
+ *   admin_label = @Translation("Restaurant Manager config form"),
  * )
  */
-class RestaurantNameForm extends FormBase {
+class RestaurantConfigurationForm extends FormBase {
   public function getFormId() {
     // Unique ID of the form.
-    return 'restaurant_name_form';
+    return 'restaurant_manager_config_form';
   }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
@@ -26,12 +26,12 @@ class RestaurantNameForm extends FormBase {
     $default_config = \Drupal::config('restaurant_manager.settings.yml');
     $config = $this->getConfiguration();
     
-    $form['restaurant_name_form_settings'] = array (
+    $form['restaurant_manager_config_form_settings'] = array (
       '#type' => 'textfield',
       '#title' => $this->t('Restaurant Name'),
       '#description' => $this->t('What is the name of your restaurant?'),
-      '#default_value' => isset($config['restaurant_name_form_settings']) ? $config['restaurant_name_form_settings'] : $default_config->get('restaurant.name'),
-      '#required' => TRUE,
+      '#default_value' => isset($config['restaurant_manager_config_form_settings']) ? $config['restaurant_manager_config_form_settings'] : $default_config->get('restaurant.name'),
+      '#required' => true,
     );
     
     return $form;
@@ -43,6 +43,6 @@ class RestaurantNameForm extends FormBase {
 
   public function submitForm(array &$form, FormStateInterface $form_state) {
     // Handle submitted form data.
-    $this->setConfigurationValue('restaurant_name_form_settings', $form_state->getValue('restaurant_name_form_settings'));
+    $this->setConfigurationValue('restaurant_manager_config_form_settings', $form_state->getValue('restaurant_manager_config_form_settings'));
   }
 }
