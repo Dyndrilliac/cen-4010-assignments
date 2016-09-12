@@ -19,8 +19,7 @@ class RestaurantNameBlock extends BlockBase {
    */
   public function build() {
     $form = \Drupal::formBuilder()->getForm('Drupal\restaurant_manager\Form\RestaurantNameForm');
-
-	return $form;
+    return $form;
   }
 }
 
