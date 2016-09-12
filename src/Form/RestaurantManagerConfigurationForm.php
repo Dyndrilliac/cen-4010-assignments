@@ -26,7 +26,16 @@ class RestaurantManagerConfigurationForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Restaurant Name'),
       '#description' => $this->t('What is the name of your restaurant?'),
+      '#required' => true,
       '#default_value' => $default_name,
+    );
+    
+    $form['actions']['#type'] = 'actions';
+    
+    $form['actions']['submit'] = array(
+      '#type' => 'submit',
+      '#value' => $this->t('Save Configuration'),
+      '#button_type' => 'primary',
     );
 
     return $form;
@@ -38,6 +47,5 @@ class RestaurantManagerConfigurationForm extends FormBase {
 
   public function submitForm(array &$form, FormStateInterface $form_state) {
     // Handle submitted form data.
-    $this->setConfigurationValue('name', $form_state->getValue('hello_block_name'));
   }
 }
