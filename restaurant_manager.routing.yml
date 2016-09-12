@@ -1,7 +1,7 @@
-restaurant_manager.content:
-  path: '/restaurant'
+restaurant_manager.admin.content:
+  path: '/admin/config/workflow/restaurant'
   defaults:
-    _controller: '\Drupal\restaurant_manager\Controller\RestaurantController::content'
-    _title: 'Hello, Food!'
+    _controller: '\Drupal\restaurant_manager\Controller\RestaurantConfigurationController::content'
+    _title: 'Restaurant Manager settings'
   requirements:
-    _permission: 'access content'
+    _permission: 'administer restaurant settings'
