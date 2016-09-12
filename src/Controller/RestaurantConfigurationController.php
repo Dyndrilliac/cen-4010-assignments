@@ -11,7 +11,9 @@ use Drupal\restaurant_manager\Plugin\Block\RestaurantNameBlock;
 
 class RestaurantConfigurationController extends ControllerBase {
   public function content() {
-    $nameBlock = new RestaurantNameBlock();
-    return $nameBlock->build();
+    return array(
+      '#type' => 'markup',
+      '#markup' => t('Hello, Food!'),
+    );
   }
 }
