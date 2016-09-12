@@ -21,13 +21,13 @@ class RestaurantConfigurationForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     // Get config.
     $default_config = \Drupal::config('restaurant_manager.settings');
-    $config = $this->getConfiguration();
+    $default_name = $default_config->get('restaurant.name');
 
-    $form['restaurant_manager_config_form_settings'] = array (
+    $form['restaurant_name'] = array (
       '#type' => 'textfield',
       '#title' => $this->t('Restaurant Name'),
       '#description' => $this->t('What is the name of your restaurant?'),
-      '#default_value' => isset($config['restaurant_manager_config_form_settings']) ? $config['restaurant_manager_config_form_settings'] : $default_config->get('restaurant.name'),
+      '#default_value' => $default_name,
     );
 
     return $form;
@@ -39,6 +39,5 @@ class RestaurantConfigurationForm extends FormBase {
 
   public function submitForm(array &$form, FormStateInterface $form_state) {
     // Handle submitted form data.
-    $this->setConfigurationValue('restaurant_manager_config_form_settings', $form_state->getValue('restaurant_manager_config_form_settings'));
   }
 }
