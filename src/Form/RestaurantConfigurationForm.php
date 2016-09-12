@@ -19,21 +19,17 @@ class RestaurantConfigurationForm extends FormBase {
   }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
-    // Create a $form API array.
-    $form = parent::blockForm($form, $form_state);
-    
     // Get config.
-    $default_config = \Drupal::config('restaurant_manager.settings.yml');
+    $default_config = \Drupal::config('restaurant_manager.settings');
     $config = $this->getConfiguration();
-    
+
     $form['restaurant_manager_config_form_settings'] = array (
       '#type' => 'textfield',
       '#title' => $this->t('Restaurant Name'),
       '#description' => $this->t('What is the name of your restaurant?'),
       '#default_value' => isset($config['restaurant_manager_config_form_settings']) ? $config['restaurant_manager_config_form_settings'] : $default_config->get('restaurant.name'),
-      '#required' => true,
     );
-    
+
     return $form;
   }
 
