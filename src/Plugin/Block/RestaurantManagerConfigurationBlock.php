@@ -12,11 +12,6 @@ use Drupal\Core\Block\BlockBase;
  * )
  */
 class RestaurantManagerConfigurationBlock extends BlockBase {
-  public function getBlockId() {
-    // Unique ID of the block.
-    return 'restaurant_manager_configuration_block';
-  }
-  
   /**
    * {@inheritdoc}
    */
