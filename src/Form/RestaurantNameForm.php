@@ -1,3 +1,4 @@
+<?php
 namespace Drupal\restaurant_manager\Form;
 
 use Drupal\Core\Form\FormBase;
