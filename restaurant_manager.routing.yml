@@ -8,12 +8,12 @@ restaurant_manager.admin.form:
   options:
     _admin_route: true
 
-restaurant_manager.main.home:
+restaurant_manager.main.status:
   path: '/restaurant_manager'
   defaults:
     _title: 'Restaurant Manager Status'
     _controller: '\Drupal\restaurant_manager\Controller\StatusController::content'
   requirements:
-    _permission: 'access content'
+    _permission: 'access restaurant manager content'
   options:
     _admin_route: false
