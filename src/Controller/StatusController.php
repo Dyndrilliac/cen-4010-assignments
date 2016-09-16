@@ -13,7 +13,7 @@ class StatusController extends ControllerBase {
   public function content() {
     return array(
         '#type' => 'markup',
-        '#markup' => $this->t('A real-time status update will display here using AJAX in later iterations.'),
+        '#markup' => $this->t('A real-time status update will be displayed here in later iterations using AJAX.'),
     );
   }
 }
