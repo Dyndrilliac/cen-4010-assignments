@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Contains \Drupal\restaurant_manager\Controller\HelloController.
+ * Contains \Drupal\restaurant_manager\Controller\HelloWorld.
  */
 
 namespace Drupal\restaurant_manager\Controller;
