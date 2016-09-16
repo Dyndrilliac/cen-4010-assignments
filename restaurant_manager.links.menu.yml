@@ -1,7 +1,6 @@
 restaurant_manager.admin:
-  title: 'Restaurant Manager module settings'
-  description: 'Configure the Restaurant Manager module settings.'
+  title: 'Restaurant Manager Settings'
+  description: 'Configure the settings for the Restaurant Manager module.'
   parent: system.admin_config_workflow
   route_name: restaurant_manager.admin.form
   weight: 100
-  
