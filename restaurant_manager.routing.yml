@@ -8,8 +8,8 @@ restaurant_manager.admin.form:
   options:
     _admin_route: true
 
-restaurant_manager.hello_world:
-  path: '/restaurant_manager/hello'
+restaurant_manager.main.home:
+  path: '/restaurant_manager'
   defaults:
     _title: 'Restaurant Manager Home'
     _controller: '\Drupal\restaurant_manager\Controller\HelloWorld::content'
