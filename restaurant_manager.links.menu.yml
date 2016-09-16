@@ -4,3 +4,10 @@ restaurant_manager.admin:
   parent: system.admin_config_workflow
   route_name: restaurant_manager.admin.form
   weight: 100
+
+restaurant_manager.main:
+  title: 'Restaurant Manager Status'
+  description: 'Monitor the status of the Restaurant Manager module.'
+  parent: main
+  route_name: restaurant_manager.main.status
+  weight: 100
