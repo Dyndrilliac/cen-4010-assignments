@@ -11,8 +11,8 @@ restaurant_manager.admin.form:
 restaurant_manager.main.home:
   path: '/restaurant_manager'
   defaults:
-    _title: 'Restaurant Manager Home'
-    _controller: '\Drupal\restaurant_manager\Controller\HelloWorld::content'
+    _title: 'Restaurant Manager Status'
+    _controller: '\Drupal\restaurant_manager\Controller\StatusController::content'
   requirements:
     _permission: 'access content'
   options:
