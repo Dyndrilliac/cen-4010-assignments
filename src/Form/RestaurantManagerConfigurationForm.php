@@ -30,7 +30,7 @@ class RestaurantManagerConfigurationForm extends FormBase {
       '#title' => $this->t('Restaurant Name'),
       '#description' => $this->t('What is the name of your restaurant?'),
       '#required' => true,
-      '#default_value' => isset($config['restaurant_name']) ? $config['restaurant_name'] : $default_config->get('restaurant.name'),
+      //'#default_value' => isset($config['restaurant_name']) ? $config['restaurant_name'] : $default_config->get('restaurant.name'),
     );
     
     $form['actions']['#type'] = 'actions';
