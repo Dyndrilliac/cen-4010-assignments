@@ -8,7 +8,7 @@ restaurant_manager.admin.form:
   options:
     _admin_route: true
 
-restaurant_manager.admin.form:
+restaurant_manager.hello_world:
   path: '/restaurant_manager/'
   defaults:
     _title: 'Restaurant Manager'
