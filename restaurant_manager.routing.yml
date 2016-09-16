@@ -1,7 +1,7 @@
 restaurant_manager.admin.form:
   path: '/admin/config/workflow/restaurant_manager'
   defaults:
-    _title: 'Restaurant Manager settings'
+    _title: 'Restaurant Manager Settings'
     _form: '\Drupal\restaurant_manager\Form\RestaurantManagerConfigurationForm'
   requirements:
     _permission: 'administer restaurant manager settings'
@@ -9,9 +9,9 @@ restaurant_manager.admin.form:
     _admin_route: true
 
 restaurant_manager.hello_world:
-  path: '/restaurant_manager/'
+  path: '/restaurant_manager'
   defaults:
-    _title: 'Restaurant Manager'
+    _title: 'Restaurant Manager Home'
     _controller: '\Drupal\restaurant_manager\Controller\HelloWorld::content'
   requirements:
     _permission: 'access content'
