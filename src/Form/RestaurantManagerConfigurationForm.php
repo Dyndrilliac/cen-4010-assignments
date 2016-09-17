@@ -5,11 +5,11 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Provides a 'Restaurant Manager configuration' form
+ * Provides a 'Restaurant Manager Configuration' form
  *
  * @Form(
  *   id = "restaurant_manager_configuration_form",
- *   admin_label = @Translation("Restaurant Manager configuration form"),
+ *   admin_label = @Translation("Restaurant Manager Configuration form"),
  * )
  */
 class RestaurantManagerConfigurationForm extends FormBase {
