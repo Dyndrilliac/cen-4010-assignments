@@ -2,6 +2,10 @@
 ####################################################################################
 # Drupal Server Initialization Script - SoftwareEngineering Fall 2016 Team Project #
 ####################################################################################
+sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/master/shell/install_deps.sh
+sudo chmod 755 install_deps.sh
+sudo ./install_deps.sh
+sudo rm -f install_deps.sh
 sudo wget https://raw.githubusercontent.com/Dyndrilliac/linux-shell-scripts/master/update.sh
 sudo chmod 755 update.sh
 sudo ./update.sh
@@ -41,7 +45,6 @@ sudo wget https://ftp.drupal.org/files/projects/vcl-8.x-1.1.tar.gz
 sudo wget https://ftp.drupal.org/files/projects/php-8.x-1.0-beta2.tar.gz
 sudo wget https://ftp.drupal.org/files/projects/devel-8.x-1.0-alpha1.tar.gz
 sudo wget https://ftp.drupal.org/files/projects/addtoany-8.x-1.7.tar.gz
-sudo wget http://openmenu.com/downloads/openmenu_drupal.zip
 sudo tar -xvzf admin_toolbar-8.x-1.17.tar.gz
 sudo tar -xvzf backup_migrate-8.x-4.0-alpha1.tar.gz
 sudo tar -xvzf captcha-8.x-1.0-alpha1.tar.gz
@@ -54,9 +57,7 @@ sudo tar -xvzf vcl-8.x-1.1.tar.gz
 sudo tar -xvzf php-8.x-1.0-beta2.tar.gz
 sudo tar -xvzf devel-8.x-1.0-alpha1.tar.gz
 sudo tar -xvzf addtoany-8.x-1.7.tar.gz
-sudo unzip openmenu_drupal.zip
 sudo rm -f *.tar.gz
-sudo rm -f *.zip
 cd ../custom
 sudo git clone https://github.com/Dyndrilliac/cen-4010-assignments.git
 cd ../../sites
