@@ -10,6 +10,9 @@ sudo wget https://raw.githubusercontent.com/Dyndrilliac/linux-shell-scripts/mast
 sudo chmod 755 update.sh
 sudo ./update.sh
 sudo rm -f update.sh
+sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/master/sql/drop_all_default_drupal_tables.sql
+sudo mysql -u drupal -p drupal < drop_all_default_drupal_tables.sql
+sudo rm -f drop_all_default_drupal_tables.sql
 cd /var/www/html
 sudo rm -rf *
 sudo wget https://ftp.drupal.org/files/projects/drupal-8.2.2.tar.gz
