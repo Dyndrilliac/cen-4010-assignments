@@ -6,10 +6,6 @@ sudo wget https://raw.githubusercontent.com/Dyndrilliac/linux-shell-scripts/mast
 sudo chmod 755 update.sh
 sudo ./update.sh
 sudo rm -f update.sh
-sudo apt install unzip
-sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/master/sql/drop_all_default_drupal_tables.sql
-sudo mysql drupal < drop_all_default_drupal_tables.sql
-sudo rm -f drop_all_default_drupal_tables.sql
 cd /var/www/html/
 sudo rm -rf *
 sudo wget https://ftp.drupal.org/files/projects/drupal-8.2.2.tar.gz
@@ -51,7 +47,10 @@ sudo rm -f *.tar.gz
 sudo rm -f *.zip
 cd ../custom
 sudo git clone https://github.com/Dyndrilliac/cen-4010-assignments.git
-cd ../../sites/default
+cd ../../sites
+sudo mkdir simpletest
+sudo chmod 777 simpletest
+cd default
 sudo cp default.settings.php settings.php
 sudo chmod 777 settings.php
 sudo mkdir files
