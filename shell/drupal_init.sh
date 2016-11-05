@@ -6,14 +6,26 @@ sudo wget https://raw.githubusercontent.com/Dyndrilliac/linux-shell-scripts/mast
 sudo chmod 755 update.sh
 sudo ./update.sh
 sudo rm -f update.sh
-cd /var/www/html/
+cd /var/www/html
 sudo rm -rf *
 sudo wget https://ftp.drupal.org/files/projects/drupal-8.2.2.tar.gz
 sudo tar -xvzf drupal-8.2.2.tar.gz
 sudo mv drupal-8.2.2/* .
 sudo rm -rf drupal-8.2.2
 sudo rm -f drupal-8.2.2.tar.gz
-cd modules
+sudo mkdir libraries
+cd libraries
+sudo mkdir d3
+cd d3
+sudo wget https://d3js.org/d3.v4.min.js
+sudo mv d3.v4.min.js d3.min.js
+cd ..
+sudo mkdir highlight
+cd highlight
+sudo wget https://www.mythicdigitalizations.com/highlight.zip
+sudo unzip highlight.zip
+sudo rm -f highlight.zip
+cd ../../modules
 sudo mkdir contrib
 sudo mkdir custom
 cd contrib
