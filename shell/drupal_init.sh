@@ -11,11 +11,11 @@ sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/mas
 sudo mysql drupal < drop_all_default_drupal_tables.sql
 sudo rm -f drop_all_default_drupal_tables.sql
 cd /var/www/html/
-sudo rm -f -r *
+sudo rm -rf *
 sudo wget https://ftp.drupal.org/files/projects/drupal-8.2.2.tar.gz
 sudo tar -xvzf drupal-8.2.2.tar.gz
 sudo mv drupal-8.2.2/* .
-sudo rm -f -r drupal-8.2.2
+sudo rm -rf drupal-8.2.2
 sudo rm -f drupal-8.2.2.tar.gz
 cd modules
 sudo mkdir contrib
