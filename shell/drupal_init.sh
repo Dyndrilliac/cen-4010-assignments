@@ -1,7 +1,26 @@
 #!/bin/bash
-####################################################################################
-# Drupal Server Initialization Script - SoftwareEngineering Fall 2016 Team Project #
-####################################################################################
+#############################################
+# Drupal Server 8.2.2 Initialization Script #
+# Author: Dyndrilliac (Matthew Boyette)     #
+# Date:   11/04/2016                        #
+#############################################
+
+# Handle command-line arguments.
+dirname="/var/www/html"
+set -- `getopt d: "$@"`
+[ $# -lt 1 ] && exit 1  # getopt failed
+while [ $# -gt 0 ] do
+    case "$1" in
+        -d) dirname="$2"; shift;;
+        --) shift; break;;
+        -*)
+            echo >&2 \
+                "usage: $0 [-d directory]"
+            exit 1;;
+        *)  break;;     # terminate while loop
+    esac
+    shift
+done
 
 # Install dependencies (unzip and php7.0-dev).
 sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/master/shell/install_deps.sh
@@ -21,7 +40,7 @@ sudo mysql -u drupal -p drupal < drop_all_default_drupal_tables.sql
 sudo rm -f drop_all_default_drupal_tables.sql
 
 # Delete all Drupal files.
-sudo cd /var/www/html
+sudo cd $dirname
 sudo rm -rf *
 
 # Download and unpack the default Drupal 8.2.2 archive.
