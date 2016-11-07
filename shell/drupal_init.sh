@@ -29,6 +29,7 @@ sudo rm -f drop_all_default_drupal_tables.sql
 
 # Delete all Drupal files.
 cd $dirname
+pwd
 sudo rm -rf *
 
 # Download and unpack the default Drupal 8.2.2 archive.
