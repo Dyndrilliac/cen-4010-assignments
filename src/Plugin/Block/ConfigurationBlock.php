@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\vmenu\Plugin\ConfigurationBlock.
+ */
 namespace Drupal\vmenu\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
@@ -11,12 +15,12 @@ use Drupal\Core\Block\BlockBase;
  *   admin_label = @Translation("V-Menu configuration block"),
  * )
  */
-class VMenuConfigurationBlock extends BlockBase {
+class ConfigurationBlock extends BlockBase {
   /**
    * {@inheritdoc}
    */
   public function build() {
-    $form = \Drupal::formBuilder()->getForm('Drupal\restaurant_manager\Form\RestaurantManagerConfigurationForm');
+    $form = \Drupal::formBuilder()->getForm('Drupal\vmenu\Form\ConfigurationForm');
     return $form;
   }
 }
