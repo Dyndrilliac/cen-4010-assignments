@@ -5,22 +5,10 @@
 # Date:   11/04/2016                        #
 #############################################
 
-# Handle command-line arguments.
-dirname="/var/www/html"
-set -- `getopt d: "$@"`
-[ $# -lt 1 ] && exit 1  # getopt failed
-while [ $# -gt 0 ] do
-    case "$1" in
-        -d) dirname="$2"; shift;;
-        --) shift; break;;
-        -*)
-            echo >&2 \
-                "usage: $0 [-d directory]"
-            exit 1;;
-        *)  break;;     # terminate while loop
-    esac
-    shift
-done
+# Prompt the user for the Drupal root directory.
+sudo clear
+sudo read -p "Please enter the Drupal root directory: " dirname
+sudo echo ""
 
 # Install dependencies (unzip and php7.0-dev).
 sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/master/shell/install_deps.sh
