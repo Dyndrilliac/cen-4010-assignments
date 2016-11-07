@@ -111,4 +111,4 @@ sudo wget https://ftp.drupal.org/files/projects/bootstrap-8.x-3.0.tar.gz
 sudo tar -xvzf bootstrap-8.x-3.0.tar.gz
 sudo rm -f *.tar.gz
 cd ../custom
-sudo cp ../../modules/custom/cen-4010-assignments/theme/* .
+sudo cp -R ../../modules/custom/cen-4010-assignments/theme/vmenu .
