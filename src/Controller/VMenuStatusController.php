@@ -1,15 +1,15 @@
 <?php
 /**
  * @file
- * Contains \Drupal\restaurant_manager\Controller\StatusController.
+ * Contains \Drupal\vmenu\Controller\StatusController.
  */
 
 /**Controller is name of file*/
-namespace Drupal\restaurant_manager\Controller;
+namespace Drupal\vmenu\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
-class StatusController extends ControllerBase {
+class VMenuStatusController extends ControllerBase {
   public function content() {
     return array(
         '#type' => 'markup',
