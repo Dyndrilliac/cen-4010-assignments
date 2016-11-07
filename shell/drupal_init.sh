@@ -28,7 +28,7 @@ sudo mysql -u drupal -p drupal < drop_all_default_drupal_tables.sql
 sudo rm -f drop_all_default_drupal_tables.sql
 
 # Delete all Drupal files.
-sudo cd $dirname
+cd $dirname
 sudo rm -rf *
 
 # Download and unpack the default Drupal 8.2.2 archive.
@@ -40,29 +40,29 @@ sudo rm -f drupal-8.2.2.tar.gz
 
 # Download and unpack libraries needed by modules.
 sudo mkdir libraries
-sudo cd libraries
+cd libraries
 sudo mkdir d3
 sudo mkdir highlight
 sudo mkdir colorbox
-sudo cd d3
+cd d3
 sudo wget https://d3js.org/d3.v4.min.js
 sudo mv d3.v4.min.js d3.min.js
-sudo cd ../highlight
+cd ../highlight
 sudo wget https://www.mythicdigitalizations.com/highlight.zip
 sudo unzip highlight.zip
 sudo rm -f highlight.zip
-sudo cd ../colorbox
+cd ../colorbox
 sudo wget https://github.com/jackmoore/colorbox/archive/1.x.zip
 sudo mv colorbox-1.x/* .
 sudo rm -rf colorbox-1.x
 sudo unzip colorbox-1.x.zip
 sudo rm -f colorbox-1.x.zip
-sudo cd ../../modules
+cd ../../modules
 
 # Download and unpack modules.
 sudo mkdir contrib
 sudo mkdir custom
-sudo cd contrib
+cd contrib
 sudo wget https://ftp.drupal.org/files/projects/admin_toolbar-8.x-1.17.tar.gz
 sudo wget https://ftp.drupal.org/files/projects/backup_migrate-8.x-4.0-alpha1.tar.gz
 sudo wget https://ftp.drupal.org/files/projects/captcha-8.x-1.0-alpha1.tar.gz
@@ -101,19 +101,19 @@ sudo git clone https://github.com/Dyndrilliac/cen-4010-assignments.git
 cd ../../sites
 sudo mkdir simpletest
 sudo chmod 777 simpletest
-sudo cd default
+cd default
 sudo mkdir files
 sudo chmod 777 files
 sudo cp default.settings.php settings.php
 sudo chmod 777 settings.php
 
 # Download and unpack themes.
-sudo cd ../../themes
+cd ../../themes
 sudo mkdir contrib
 sudo mkdir custom
-sudo cd contrib
+cd contrib
 sudo wget https://ftp.drupal.org/files/projects/bootstrap-8.x-3.0.tar.gz
 sudo tar -xvzf bootstrap-8.x-3.0.tar.gz
 sudo rm -f *.tar.gz
-sudo cd ../custom
+cd ../custom
 sudo cp ../../modules/custom/cen-4010-assignments/theme/* .
