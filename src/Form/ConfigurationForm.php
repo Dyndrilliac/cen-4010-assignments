@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\vmenu\Form\ConfigurationForm.
+ */
 namespace Drupal\vmenu\Form;
 
 use Drupal\Core\Form\FormBase;
