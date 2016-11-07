@@ -2,7 +2,7 @@ vmenu.admin.form:
   path: '/admin/config/workflow/vmenu'
   defaults:
     _title: 'V-Menu Settings'
-    _form: '\Drupal\vmenu\Form\RestaurantManagerConfigurationForm'
+    _form: '\Drupal\vmenu\Form\ConfigurationForm'
   requirements:
     _permission: 'administer restaurant management settings'
   options:
