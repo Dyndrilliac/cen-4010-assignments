@@ -1,0 +1,19 @@
+vmenu.admin.form:
+  path: '/admin/config/workflow/vmenu'
+  defaults:
+    _title: 'V-Menu Settings'
+    _form: '\Drupal\vmenu\Form\RestaurantManagerConfigurationForm'
+  requirements:
+    _permission: 'administer restaurant management settings'
+  options:
+    _admin_route: true
+
+vmenu.main.status:
+  path: '/vmenu'
+  defaults:
+    _title: 'Orders'
+    _controller: '\Drupal\vmenu\Controller\StatusController::content'
+  requirements:
+    _permission: 'access restaurant management content'
+  options:
+    _admin_route: false
