@@ -52,6 +52,10 @@ sudo mv colorbox-1.x/* .
 sudo rm -rf colorbox-1.x
 sudo unzip colorbox-1.x.zip
 sudo rm -f colorbox-1.x.zip
+sudo unzip 1.x.zip
+sudo rm -f 1.x.zip
+sudo mv colorbox-1.x/* .
+sudo rm -rf colorbox-1.x
 cd ../../modules
 
 # Download and unpack modules.
