@@ -6,9 +6,9 @@
 #############################################
 
 # Prompt the user for the Drupal root directory.
-sudo clear
-sudo read -p "Please enter the Drupal root directory: " dirname
-sudo echo ""
+clear
+read -p "Please enter the Drupal root directory: " dirname
+echo ""
 
 # Install dependencies (unzip and php7.0-dev).
 sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/master/shell/install_deps.sh
