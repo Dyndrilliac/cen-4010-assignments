@@ -1,5 +1,5 @@
 {
-  "name": "drupal/restaurant_manager",
+  "name": "drupal/vmenu",
   "description": "The goal of this project is to design, implement, test, publish, and maintain an efficient restaurant management sub-system module for the web-based Drupal content management system (CMS).",
   "type": "drupal-module",
   "homepage": "https://www.drupal.org/sandbox/dyndrilliac/2798295",
@@ -11,12 +11,6 @@
       "role": "Maintainer"
     },
     {
-      "name": "David Hughes (mustng)",
-      "email": "musthavetang@gmail.com",
-      "homepage": "https://github.com/mustng",
-      "role": "Contributor"
-    },
-	  {
       "name": "William Mejia (willmej07)",
       "email": "willmej14@hotmail.com",
       "homepage": "https://github.com/willmej07",
@@ -25,7 +19,7 @@
     {
       "name": "Demetrius Myers",
       "email": "dmyers009@gmail.com",
-      "homepage": "",
+      "homepage": "https://github.com/DemetriM9002",
       "role": "Contributor"
     },
 	  {
