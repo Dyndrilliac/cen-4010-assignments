@@ -1,9 +1,9 @@
-administer restaurant manager settings:
-  title: 'Administer Restaurant Manager Settings'
+administer restaurant management settings:
+  title: 'Administer V-Menu Settings'
   description: 'Configure the settings for the Restaurant Manager module.'
   restrict access: true
 
-access restaurant manager content:
-  title: 'Access Restaurant Manager Content'
+access restaurant management content:
+  title: 'Access V-Menu Content'
   description: 'Access the content of the Restaurant Manager module.'
   restrict access: false
