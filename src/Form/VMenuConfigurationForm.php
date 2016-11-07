@@ -1,21 +1,21 @@
 <?php
-namespace Drupal\restaurant_manager\Form;
+namespace Drupal\vmenu\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Provides a 'Restaurant Manager Configuration' form
+ * Provides a 'V-Menu Configuration' form
  *
  * @Form(
- *   id = "restaurant_manager_configuration_form",
- *   admin_label = @Translation("Restaurant Manager Configuration form"),
+ *   id = "vmenu_configuration_form",
+ *   admin_label = @Translation("V-Menu Configuration form"),
  * )
  */
-class RestaurantManagerConfigurationForm extends FormBase {
+class VMenuConfigurationForm extends FormBase {
   public function getFormId() {
     // Unique ID of the form.
-    return 'restaurant_manager_configuration_form';
+    return 'vmenu_configuration_form';
   }
 
   /**
@@ -28,7 +28,7 @@ class RestaurantManagerConfigurationForm extends FormBase {
       '#title' => $this->t('Restaurant Name'),
       '#description' => $this->t('What is the name of your restaurant?'),
       '#required' => true,
-      //'#default_value' => isset($config['restaurant_name']) ? $config['restaurant_name'] : $default_config->get('restaurant.name'),
+      //'#default_value' => ?,
     );
     
     $form['actions']['#type'] = 'actions';
