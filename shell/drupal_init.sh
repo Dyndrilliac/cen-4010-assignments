@@ -73,6 +73,10 @@ sudo wget https://ftp.drupal.org/files/projects/bootstrap_layouts-8.x-3.1.tar.gz
 sudo wget https://ftp.drupal.org/files/projects/entity-8.x-1.0-alpha3.tar.gz
 sudo wget https://ftp.drupal.org/files/projects/colorbox-8.x-1.2.tar.gz
 sudo wget https://ftp.drupal.org/files/projects/ubercart-8.x-4.0-alpha5.tar.gz
+sudo wget https://ftp.drupal.org/files/projects/layout_plugin-8.x-1.0-alpha23.tar.gz
+sudo wget https://ftp.drupal.org/files/projects/panels-8.x-3.0-beta5.tar.gz
+sudo wget https://ftp.drupal.org/files/projects/page_manager-8.x-1.0-alpha24.tar.gz
+sudo wget https://ftp.drupal.org/files/projects/ds-8.x-2.6.tar.gz
 sudo tar -xvzf admin_toolbar-8.x-1.17.tar.gz
 sudo tar -xvzf backup_migrate-8.x-4.0-alpha1.tar.gz
 sudo tar -xvzf captcha-8.x-1.0-alpha1.tar.gz
@@ -88,6 +92,10 @@ sudo tar -xvzf bootstrap_layouts-8.x-3.1.tar.gz
 sudo tar -xvzf entity-8.x-1.0-alpha3.tar.gz
 sudo tar -xvzf colorbox-8.x-1.2.tar.gz
 sudo tar -xvzf ubercart-8.x-4.0-alpha5.tar.gz
+sudo tar -xvzf layout_plugin-8.x-1.0-alpha23.tar.gz
+sudo tar -xvzf panels-8.x-3.0-beta5.tar.gz
+sudo tar -xvzf page_manager-8.x-1.0-alpha24.tar.gz
+sudo tar -xvzf ds-8.x-2.6.tar.gz
 sudo rm -f *.tar.gz
 cd ../custom
 sudo git clone https://github.com/Dyndrilliac/cen-4010-assignments.git
