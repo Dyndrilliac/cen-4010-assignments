@@ -1,10 +1,10 @@
-name: Restaurant Manager
+name: V-Menu
 description: The goal of this project is to design and implement an efficient restaurant management sub-system module for the web-based Drupal content management system (CMS).
-package: SoftwareEngFall16
+package: SoftwareEngFall2016
 
 type: module
 core: 8.x
 
-configure: restaurant_manager.settings
+configure: vmenu.settings
 
 hidden: false
