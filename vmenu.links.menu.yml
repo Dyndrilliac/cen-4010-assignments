@@ -1,0 +1,13 @@
+vmenu.admin:
+  title: 'V-Menu Settings'
+  description: 'Configure the settings for the V-Menu restaurant management module.'
+  parent: system.admin_config_workflow
+  route_name: vmenu.admin.form
+  weight: 100
+
+vmenu.main:
+  title: 'Orders'
+  description: 'Monitor the status of the V-Menu restaurant management module.'
+  parent: main
+  route_name: vmenu.main.status
+  weight: 100
