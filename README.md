@@ -1,7 +1,7 @@
 *******************************************************************
 
-* Title:     Restaurant Manager
-* Authors:   [Matthew Boyette](mailto:Dyndrilliac@gmail.com), [David Hughes](mailto:musthavetang@gmail.com), [William Mejia](mailto:willmej14@hotmail.com), [Demetrius Myers](mailto:dmyers009@gmail.com), and [Slaven Popadic](mailto:aven877@gmail.com)
+* Title:     V-Menu
+* Authors:   [Matthew Boyette](mailto:Dyndrilliac@gmail.com), [William Mejia](mailto:willmej14@hotmail.com), [Demetrius Myers](mailto:dmyers009@gmail.com), and [Slaven Popadic](mailto:aven877@gmail.com)
 * Professor: Dr. Douglas Leas
 * Term:      Fall 2016
 
