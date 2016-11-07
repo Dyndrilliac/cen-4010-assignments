@@ -5,11 +5,6 @@
 # Date:   11/04/2016                        #
 #############################################
 
-# Prompt the user for the Drupal root directory.
-clear
-read -p "Please enter the Drupal root directory: " dirname
-echo ""
-
 # Install dependencies (unzip and php7.0-dev).
 sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/master/shell/install_deps.sh
 sudo chmod 755 install_deps.sh
@@ -28,8 +23,7 @@ sudo mysql -u drupal -p drupal < drop_all_default_drupal_tables.sql
 sudo rm -f drop_all_default_drupal_tables.sql
 
 # Delete all Drupal files.
-cd $dirname
-pwd
+cd /var/www/html
 sudo rm -rf *
 
 # Download and unpack the default Drupal 8.2.2 archive.
