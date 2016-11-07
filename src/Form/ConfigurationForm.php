@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   admin_label = @Translation("V-Menu Configuration form"),
  * )
  */
-class VMenuConfigurationForm extends FormBase {
+class ConfigurationForm extends FormBase {
   public function getFormId() {
     // Unique ID of the form.
     return 'vmenu_configuration_form';
