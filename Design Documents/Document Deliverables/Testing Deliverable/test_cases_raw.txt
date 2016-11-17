@@ -1,0 +1,122 @@
+Test Case Number: 1
+Preconditions/Setup: Tester must be at the home page.
+Requirement(s) Tested: View Menu
+Action 1: Tester activates View Menu link.
+Verify 1: Tester confirms that the menu page is displayed within the content pane.
+
+Test Case Number: 2
+Preconditions/Setup: Tester must be at the menu page.
+Requirement(s) Tested: Place Order
+Action 1: Tester selects their desired menu items.
+Verify 1: Tester confirms that the selected items are added to the live preview of their receipt.
+Action 2: Tester activates the Place Order button.
+Verify 2: Tester confirms that the order confirmation page is displayed within the content pane.
+
+Test Case Number: 3
+Preconditions/Setup: Tester must have placed an order, and be at the order confirmation page.
+Requirement(s) Tested: Confirm/Cancel Order
+Action 1: Tester activates the Confirm Order button.
+Verify 1: Tester confirms that they are now prompted for payment information.
+Action 2: Tester enters payment information, and activates the Complete Order button.
+Verify 2: Tester confirms that they receive their receipt via email.
+
+Test Case Number: 4
+Preconditions/Setup: Tester must have placed an order, and be at the order confirmation page.
+Requirement(s) Tested: Confirm/Cancel Order
+Action 1: Tester fails to activate the Confirm Order button (either by leaving the confirmation page or losing connection to the server).
+Action 2: Tester activates the Orders navbar link.
+Verify 1: Tester confirms that nothing was added to the order status page.
+
+Test Case Number: 5
+Preconditions/Setup: Tester must have confirmed an order, be logged in as a Kitchen Staff employee, and be at the order status page.
+Requirement(s) Tested: Flag Order as Completed
+Action 1: Tester activates the Completed button.
+Verify 1: Tester confirms that the order leaves the Kitchen Queue.
+
+Test Case Number: 6
+Preconditions/Setup: Tester must have marked an order as completed, be logged in as a Wait Staff employee, and be at the order status page.
+Requirement(s) Tested: Flag Order as Delivered
+Action 1: Tester activates the Delivered button.
+Verify 1: Tester confirms that the order leaves the Wait Queue.
+
+Test Case Number: 7
+Preconditions/Setup: N/A
+Requirement(s) Tested: View Order Status
+Action 1: Tester activates the Orders navbar link.
+Verify 1A: Tester confirms that the order status page is displayed within the content pane.
+Verify 1B: Tester confirms that they are prompted for an order identification number.
+Action 2: Tester enters a valid order identification number.
+Verify 2: Tester confirms that the associated order is displayed on the page.
+
+Test Case Number: 8
+Preconditions/Setup: Tester must be logged in as a Customer.
+Requirement(s) Tested: View Order Status
+Action 1: Tester activates the Orders navbar link.
+Verify 1A: Tester confirms that the order status page is displayed within the content pane.
+Verify 1B: Tester confirms that all confirmed orders placed by that account are displayed on the page.
+
+Test Case Number: 9
+Preconditions/Setup: Tester must be logged in as a Kitchen Staff employee.
+Requirement(s) Tested: View Kitchen Status
+Action 1: Tester activates the Orders navbar link.
+Verify 1A: Tester confirms that the order status page is displayed within the content pane.
+Verify 1B: Tester confirms that all confirmed but not yet completed orders are displayed (Kitchen Queue).
+
+Test Case Number: 10
+Preconditions/Setup: Tester must be logged in as a Wait Staff employee.
+Requirement(s) Tested: View Wait Status
+Action 1: Tester activates the Orders navbar link.
+Verify 1A: Tester confirms that the order status page is displayed within the content pane.
+Verify 1B: Tester confirms that all completed but not yet delivered orders are displayed (Wait Queue).
+
+Test Case Number: 11
+Preconditions/Setup: Tester must be logged in as a Manager.
+Requirement(s) Tested: View Universal Status
+Action 1: Tester activates the Orders navbar link.
+Verify 1A: Tester confirms that the order status page is displayed within the content pane.
+Verify 1B: Tester confirms that all confirmed but not yet delivered orders are displayed (Kitchen & Wait Queues), and are prompted for an order identification number to display any individual past or present order that exists in the database.
+Action 2: Tester enters a valid order identification number.
+Verify 2: Tester confirms that the associated order is displayed.
+
+Test Case Number: 12
+Preconditions/Setup: N/A
+Requirement(s) Tested: View Customer Reports
+Action 1: Tester activates the Reports navbar link.
+Verify 1: Tester confirms that the Reports page is displayed within the content pane.
+Action 2: Tester selects the desired report.
+Verify 2: Tester confirms that the selected report is displayed on the page.
+
+Test Case Number: 13
+Preconditions/Setup: Tester must be logged in as a Manager.
+Requirement(s) Tested: View Manager Reports
+Action 1: Tester activates the Reports navbar link.
+Verify 1: Tester confirms that the Reports page is displayed within the content pane.
+Action 2: Tester selects the desired report.
+Verify 2: Tester confirms that the selected report is displayed on the page.
+
+Test Case Number: 14
+Preconditions/Setup: Tester must have confirmed an order, and be logged in as a Customer.
+Requirement(s) Tested: Request Help
+Action 1: Tester activates the Request Help link.
+Action 2: Tester logs out, and then logs back in as a Wait Staff employee.
+Action 2: Tester activates the Orders navbar link.
+Verify 1: Tester confirms that the order is displayed on the order status page with a red background.
+
+Test Case Number: 15
+Preconditions/Setup: Tester must be logged in as a Manager.
+Requirement(s) Tested: Bulk Data Import/Export
+Action 1: Tester activates the V-Menu Settings link from the administrative toolbar.
+Action 2: Tester switches to the Bulk Data Import/Export tab.
+Action 3: Tester supplies a file name and path to upload the file on their local machine.
+Action 4: Tester clicks the Import Data button.
+Action 5: Tester switches back to the Settings tab.
+Verify 1: Tester confirms that the settings have been replaced with those from the supplied data file.
+
+Test Case Number: 16
+Preconditions/Setup: Tester must be logged in as a Manager.
+Requirement(s) Tested: Bulk Data Import/Export
+Action 1: Tester activates the V-Menu Settings link from the administrative toolbar.
+Action 2: Tester switches to the Bulk Data Import/Export tab.
+Action 3: Tester supplies a file name and path to download the file on their local machine.
+Action 4: Tester clicks the Export Data button.
+Verify 1: Tester confirms that the data file has been saved to the specified location on their local machine.
