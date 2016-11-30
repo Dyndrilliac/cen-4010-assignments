@@ -102,7 +102,7 @@ sudo tar -xvzf ubercart-8.x-4.0-alpha5.tar.gz
 sudo tar -xvzf vcl-8.x-1.1.tar.gz
 sudo rm -f *.tar.gz
 cd ../custom
-sudo git clone https://github.com/Dyndrilliac/cen-4010-assignments.git
+sudo git clone https://github.com/Dyndrilliac/cen-4010-assignments.git vmenu
 
 # Set up the public unit testing directory, public files directory, and copy Drupal's default settings.
 cd ../../sites
