@@ -1,6 +1,6 @@
 #!/bin/bash
 #############################################
-# Drupal Server 8.2.2 Initialization Script #
+# Drupal Server 8.2.3 Initialization Script #
 # Author: Dyndrilliac (Matthew Boyette)     #
 # Date:   11/04/2016                        #
 #############################################
