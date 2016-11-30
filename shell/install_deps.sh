@@ -12,8 +12,19 @@ sudo apt install unzip
 sudo apt-get install php7.0-dev
 
 # Install Composer dependency manager.
+EXPECTED_SIGNATURE=$(sudo wget -q -O - https://composer.github.io/installer.sig)
 sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-sudo php -r "if (hash_file('SHA384', 'composer-setup.php') === 'aa96f26c2b67226a324c27919f1eb05f21c248b987e6195cad9690d5c1ff713d53020a02ac8c217dbf90a7eacc9d141d') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-sudo php -r "unlink('composer-setup.php');"
+ACTUAL_SIGNATURE=$(sudo php -r "echo hash_file('SHA384', 'composer-setup.php');")
+
+if [ "$EXPECTED_SIGNATURE" != "$ACTUAL_SIGNATURE" ]
+then
+    >&2 echo 'ERROR: Invalid installer signature'
+    sudo rm composer-setup.php
+    exit 1
+fi
+
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer --quiet
+RESULT=$?
+sudo rm composer-setup.php
 sudo chmod 755 /usr/local/bin/composer
+exit $RESULT
