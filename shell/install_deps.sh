@@ -8,6 +8,9 @@
 # Install zip archive extraction tool.
 sudo apt install unzip
 
+# Install JQ to handle JSON.
+sudo apt-get install jq
+
 # Install PHP 7.x dev tools.
 sudo apt-get install php7.0-dev
 
