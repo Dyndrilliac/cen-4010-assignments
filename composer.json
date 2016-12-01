@@ -1,6 +1,6 @@
 {
   "name": "drupal/vmenu",
-  "description": "The goal of this project is to design, implement, test, publish, and maintain an efficient restaurant management sub-system module for the web-based Drupal content management system (CMS).",
+  "description": "The goal of this project is to design, implement, test, publish, and maintain an efficient restaurant management subsystem module for the web-based Drupal content management system (CMS).",
   "type": "drupal-module",
   "homepage": "https://www.drupal.org/sandbox/dyndrilliac/2798295",
   "license": "GPL-3.0+",
@@ -31,68 +31,10 @@
     }
   ],
   "support": {
-    "demonstration": "https://www.mythicdigitalizations.com/",
+    "demonstration": "http://139.62.210.134/",
     "documentation": "https://github.com/Dyndrilliac/cen-4010-assignments/wiki",
     "issues": "https://github.com/Dyndrilliac/cen-4010-assignments/issues",
     "releases": "https://github.com/Dyndrilliac/cen-4010-assignments/releases",
     "source": "https://github.com/Dyndrilliac/cen-4010-assignments"
   },
-  "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        }
-    ],
-    "require": {
-        "composer/installers": "^1.2",
-        "drupal-composer/drupal-scaffold": "^2.2",
-        "cweagans/composer-patches": "~1.0",
-        "drupal/core": "~8.0",
-        "drush/drush": "~8.0",
-        "drupal/console": "~1.0"
-    },
-    "require-dev": {
-        "behat/mink": "~1.7",
-        "behat/mink-goutte-driver": "~1.2",
-        "jcalderonzumba/gastonjs": "~1.0.2",
-        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-        "mikey179/vfsStream": "~1.2",
-        "phpunit/phpunit": "~4.8",
-        "symfony/css-selector": "~2.8"
-    },
-    "conflict": {
-        "drupal/drupal": "*"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ]
-    },
-    "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "pre-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "pre-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ]
-    },
-    "extra": {
-        "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"]
-        }
-    }
 }
