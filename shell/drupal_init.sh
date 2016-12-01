@@ -5,6 +5,20 @@
 # Date:   11/04/2016                        #
 #############################################
 
+# Explanation of Command-Line Paramaters
+#############################################
+# $1 is the root directory where you want to install Drupal.
+# Examples:
+#     - /var/www/html
+#     - /usr/www
+# $2 is the single trusted canonical host domain or IP address.
+# The script automatically escapes periods contained within the string.
+# Examples:
+#     - localhost
+#     - 192.168.1.4
+#     - www.example.com
+#     - example.org
+
 # Install dependencies (unzip and php7.0-dev).
 sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/master/shell/install_deps.sh
 sudo chmod 755 install_deps.sh
@@ -23,7 +37,7 @@ sudo mysql -u drupal -p drupal < drop_all_default_drupal_tables.sql
 sudo rm -f drop_all_default_drupal_tables.sql
 
 # Delete all Drupal files.
-cd /var/www/html
+cd $1
 sudo rm -rf *
 
 # Download and unpack the default Drupal 8.2.3 archive.
@@ -32,6 +46,9 @@ sudo tar -xvzf drupal-8.2.3.tar.gz
 sudo mv drupal-8.2.3/* .
 sudo rm -rf drupal-8.2.3
 sudo rm -f drupal-8.2.3.tar.gz
+
+# Set up composer.
+# TODO
 
 # Download and unpack libraries needed by modules.
 sudo mkdir libraries
@@ -113,6 +130,12 @@ sudo mkdir files
 sudo chmod 777 files
 sudo cp default.settings.php settings.php
 sudo chmod 777 settings.php
+
+# Append trusted host pattern to settings.php.
+echo -e "" >> settings.php
+echo "\$settings['trusted_host_patterns'] = array(" >> settings.php
+echo "  '^${2//./\\.}\$'," >> settings.php
+echo ");" >> settings.php
 
 # Download and unpack themes.
 cd ../../themes
