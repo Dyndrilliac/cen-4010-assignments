@@ -5,15 +5,8 @@
 # Date:   11/07/2016                        #
 #############################################
 
-# Explanation of Command-Line Paramaters
-#############################################
-# $1 is the root directory where you have Drupal installed.
-# Examples:
-#     - /var/www/html
-#     - /usr/www
-
-# Change directory to drupal installation.
-cd $1
+# Change directory to Drupal installation.
+cd /var/www/html
 
 # Update local custom module repository from GitHub.
 cd modules/custom/vmenu

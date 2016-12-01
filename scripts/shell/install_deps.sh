@@ -5,6 +5,12 @@
 # Date:   11/04/2016                        #
 #############################################
 
+# Run update script.
+sudo wget https://raw.githubusercontent.com/Dyndrilliac/linux-shell-scripts/master/update.sh
+sudo chmod 755 update.sh
+sudo ./update.sh
+sudo rm -f update.sh
+
 # Install zip archive extraction tool.
 sudo apt install unzip
 
@@ -30,4 +36,10 @@ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer --q
 RESULT=$?
 sudo rm composer-setup.php
 sudo chmod 755 /usr/local/bin/composer
+
+# Run update script.
+sudo wget https://raw.githubusercontent.com/Dyndrilliac/linux-shell-scripts/master/update.sh
+sudo chmod 755 update.sh
+sudo ./update.sh
+sudo rm -f update.sh
 exit $RESULT

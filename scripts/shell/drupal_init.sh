@@ -1,16 +1,12 @@
 #!/bin/bash
 #############################################
-# Drupal Server 8.2.3 Initialization Script #
+# Drupal Server Initialization Script       #
 # Author: Dyndrilliac (Matthew Boyette)     #
 # Date:   11/04/2016                        #
 #############################################
 
 # Explanation of Command-Line Paramaters
 #############################################
-# $1 is the root directory where you want to install Drupal.
-# Examples:
-#     - /var/www/html
-#     - /usr/www
 # $2 is the single trusted canonical host domain or IP address.
 # The script automatically escapes periods contained within the string.
 # Examples:
@@ -19,38 +15,52 @@
 #     - www.example.com
 #     - example.org
 
-# Install dependencies (unzip and php7.0-dev).
+# Check for updates, install dependencies, then check for updates again.
 sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/master/shell/install_deps.sh
 sudo chmod 755 install_deps.sh
 sudo ./install_deps.sh
 sudo rm -f install_deps.sh
-
-# Run update script.
-sudo wget https://raw.githubusercontent.com/Dyndrilliac/linux-shell-scripts/master/update.sh
-sudo chmod 755 update.sh
-sudo ./update.sh
-sudo rm -f update.sh
 
 # Drop all default Drupal tables from MySQL/MariaDB.
 sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/master/sql/drop_all_default_drupal_tables.sql
 sudo mysql -u drupal -p drupal < drop_all_default_drupal_tables.sql
 sudo rm -f drop_all_default_drupal_tables.sql
 
-# Delete all Drupal files.
-cd $1
+# Delete all Drupal files, then clone the drupal-project repository and run composer.
+cd /var/www/
 sudo rm -rf *
+cd ..
+sudo git clone https://github.com/Dyndrilliac/drupal-project.git www
+cd www
+sudo composer create-project --stability dev --no-interaction
 
-# Download and unpack the default Drupal 8.2.3 archive.
-sudo wget https://ftp.drupal.org/files/projects/drupal-8.2.3.tar.gz
-sudo tar -xvzf drupal-8.2.3.tar.gz
-sudo mv drupal-8.2.3/* .
-sudo rm -rf drupal-8.2.3
-sudo rm -f drupal-8.2.3.tar.gz
-
-# Set up composer.
-# TODO
+# Download and unpack contrib modules/themes with composer.
+cd ..
+sudo composer require drupal/addtoany
+sudo composer require drupal/admin_toolbar
+sudo composer require drupal/bootstrap_layouts
+sudo composer require drupal/captcha
+sudo composer require drupal/colorbox
+sudo composer require drupal/ctools
+sudo composer require drupal/devel
+sudo composer require drupal/ds
+sudo composer require drupal/google_analytics
+sudo composer require drupal/layout_plugin
+sudo composer require drupal/page_manager
+sudo composer require drupal/panels
+sudo composer require drupal/pathauto
+sudo composer require drupal/php
+sudo composer require drupal/recaptcha
+sudo composer require drupal/search_api
+sudo composer require drupal/token
+sudo composer require drupal/ubercart
+sudo composer require drupal/vcl
+#sudo composer require drupal/backup_migrate
+#sudo composer require drupal/entity
+sudo composer require drupal/bootstrap
 
 # Download and unpack libraries needed by modules.
+cd html
 sudo mkdir libraries
 cd libraries
 sudo mkdir d3
@@ -69,81 +79,27 @@ sudo unzip 1.x.zip
 sudo rm -f 1.x.zip
 sudo mv colorbox-1.x/* .
 sudo rm -rf colorbox-1.x
-cd ../../modules
 
-# Download and unpack modules.
-sudo mkdir contrib
-sudo mkdir custom
-cd contrib
-sudo wget https://ftp.drupal.org/files/projects/addtoany-8.x-1.7.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/admin_toolbar-8.x-1.17.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/backup_migrate-8.x-4.0-alpha1.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/bootstrap_layouts-8.x-3.1.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/captcha-8.x-1.0-alpha1.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/colorbox-8.x-1.2.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/ctools-8.x-3.0-alpha27.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/devel-8.x-1.0-alpha1.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/ds-8.x-2.6.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/entity-8.x-1.0-alpha3.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/google_analytics-8.x-2.1.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/layout_plugin-8.x-1.0-alpha23.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/page_manager-8.x-1.0-alpha24.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/panels-7.x-3.8.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/pathauto-8.x-1.0-beta1.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/php-8.x-1.0-beta2.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/recaptcha-8.x-2.2.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/search_api-8.x-1.0-beta3.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/token-8.x-1.0-beta2.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/ubercart-8.x-4.0-alpha5.tar.gz
-sudo wget https://ftp.drupal.org/files/projects/vcl-8.x-1.1.tar.gz
-sudo tar -xvzf addtoany-8.x-1.7.tar.gz
-sudo tar -xvzf admin_toolbar-8.x-1.17.tar.gz
-sudo tar -xvzf backup_migrate-8.x-4.0-alpha1.tar.gz
-sudo tar -xvzf bootstrap_layouts-8.x-3.1.tar.gz
-sudo tar -xvzf captcha-8.x-1.0-alpha1.tar.gz
-sudo tar -xvzf colorbox-8.x-1.2.tar.gz
-sudo tar -xvzf ctools-8.x-3.0-alpha27.tar.gz
-sudo tar -xvzf devel-8.x-1.0-alpha1.tar.gz
-sudo tar -xvzf ds-8.x-2.6.tar.gz
-sudo tar -xvzf entity-8.x-1.0-alpha3.tar.gz
-sudo tar -xvzf google_analytics-8.x-2.1.tar.gz
-sudo tar -xvzf layout_plugin-8.x-1.0-alpha23.tar.gz
-sudo tar -xvzf page_manager-8.x-1.0-alpha24.tar.gz
-sudo tar -xvzf panels-7.x-3.8.tar.gz
-sudo tar -xvzf pathauto-8.x-1.0-beta1.tar.gz
-sudo tar -xvzf php-8.x-1.0-beta2.tar.gz
-sudo tar -xvzf recaptcha-8.x-2.2.tar.gz
-sudo tar -xvzf search_api-8.x-1.0-beta3.tar.gz
-sudo tar -xvzf token-8.x-1.0-beta2.tar.gz
-sudo tar -xvzf ubercart-8.x-4.0-alpha5.tar.gz
-sudo tar -xvzf vcl-8.x-1.1.tar.gz
-sudo rm -f *.tar.gz
-cd ../custom
-sudo git clone https://github.com/Dyndrilliac/cen-4010-assignments.git vmenu
-
-# Set up the public unit testing directory, public files directory, and copy Drupal's default settings.
+# Setup testing framework.
 cd ../../sites
 sudo mkdir simpletest
 sudo chmod 777 simpletest
-cd default
-sudo mkdir files
-sudo chmod 777 files
-sudo cp default.settings.php settings.php
-sudo chmod 777 settings.php
 
 # Append trusted host pattern to settings.php.
-echo -e "" >> settings.php
-echo "\$settings['trusted_host_patterns'] = array(" >> settings.php
-echo "  '^${2//./\\.}\$'," >> settings.php
-echo ");" >> settings.php
+cd default
+sudo echo -e "" >> settings.php
+sudo echo "\$settings['trusted_host_patterns'] = array(" >> settings.php
+sudo echo "  '^${1//./\\.}\$'," >> settings.php
+sudo echo ");" >> settings.php
 
-# Download and unpack themes.
-cd ../../themes
-sudo mkdir contrib
+# Download and unpack custom module with git.
+cd ../../modules
 sudo mkdir custom
-cd contrib
-sudo wget https://ftp.drupal.org/files/projects/bootstrap-8.x-3.1.tar.gz
-sudo tar -xvzf bootstrap-8.x-3.1.tar.gz
-sudo rm -f *.tar.gz
-cd ../custom
-sudo cp -R ../../modules/custom/cen-4010-assignments/theme/vmenu .
+cd custom
+sudo git clone https://github.com/Dyndrilliac/cen-4010-assignments.git vmenu
+
+# Copy custom theme from module directory.
+cd ../../themes
+sudo mkdir custom
+cd custom
+sudo cp -R ../../modules/custom/vmenu/theme/vmenu .
