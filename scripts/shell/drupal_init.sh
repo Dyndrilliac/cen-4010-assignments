@@ -92,7 +92,7 @@ sudo echo "\$settings['trusted_host_patterns'] = array(" >> settings.php
 sudo echo "  '^${1//./\\.}\$'," >> settings.php
 sudo echo ");" >> settings.php
 
-# Download and unpack custom module with git.
+# Download and unpack custom modules with git.
 cd ../../modules
 sudo mkdir custom
 cd custom
