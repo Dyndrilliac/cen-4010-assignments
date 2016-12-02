@@ -1,12 +1,12 @@
 global-styling:
   css:
-    theme:
-      css/style.css: {}
+    layout:
+      css/style.css: {preprocess: false}
       'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css': {type: external}
 
 global-scripting:
   js:
-    js/main.js: {}
+    js/main.js: {preprocess: false}
   dependencies:
     - core/jquery
 
