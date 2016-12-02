@@ -46,6 +46,7 @@ sudo composer require drupal/devel
 sudo composer require drupal/ds
 sudo composer require drupal/google_analytics
 sudo composer require drupal/layout_plugin
+sudo composer require drupal/openrestaurant
 sudo composer require drupal/page_manager
 sudo composer require drupal/panels
 sudo composer require drupal/pathauto
