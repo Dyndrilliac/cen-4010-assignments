@@ -37,27 +37,26 @@ cd www
 sudo composer create-project --stability dev --no-interaction
 
 # Download and unpack contrib modules/themes with composer.
-cd ..
-sudo composer require drupal/addtoany
-sudo composer require drupal/admin_toolbar
-sudo composer require drupal/bootstrap_layouts
-sudo composer require drupal/captcha
-sudo composer require drupal/colorbox
-sudo composer require drupal/ctools
-sudo composer require drupal/devel
-sudo composer require drupal/ds
-sudo composer require drupal/google_analytics
-sudo composer require drupal/layout_plugin
-sudo composer require drupal/page_manager
-sudo composer require drupal/panels
-sudo composer require drupal/pathauto
-sudo composer require drupal/php
-sudo composer require drupal/recaptcha
-sudo composer require drupal/search_api
-sudo composer require drupal/token
-sudo composer require drupal/ubercart
-sudo composer require drupal/vcl
-sudo composer require drupal/bootstrap
+#sudo composer require drupal/addtoany
+#sudo composer require drupal/admin_toolbar
+#sudo composer require drupal/bootstrap_layouts
+#sudo composer require drupal/captcha
+#sudo composer require drupal/colorbox
+#sudo composer require drupal/ctools
+#sudo composer require drupal/devel
+#sudo composer require drupal/ds
+#sudo composer require drupal/google_analytics
+#sudo composer require drupal/layout_plugin
+#sudo composer require drupal/page_manager
+#sudo composer require drupal/panels
+#sudo composer require drupal/pathauto
+#sudo composer require drupal/php
+#sudo composer require drupal/recaptcha
+#sudo composer require drupal/search_api
+#sudo composer require drupal/token
+#sudo composer require drupal/ubercart
+#sudo composer require drupal/vcl
+#sudo composer require drupal/bootstrap
 
 # Download and unpack libraries needed by modules.
 cd html
