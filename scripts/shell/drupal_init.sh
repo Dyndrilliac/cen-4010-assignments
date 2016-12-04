@@ -29,6 +29,8 @@ sudo rm -f drop_all_default_drupal_tables.sql
 # Delete all Drupal files, then clone the drupal-project repository and run composer.
 cd /var/www/
 sudo rm -rf *
+sudo rm -rf .g*
+sudo rm -rf .t*
 cd ..
 sudo git clone https://github.com/Dyndrilliac/drupal-project.git www
 cd www
