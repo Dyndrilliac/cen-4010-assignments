@@ -6,7 +6,13 @@
 #############################################
 
 # Change directory to Drupal installation.
-cd /var/www/html/modules/custom/vmenu
+cd /var/www/
+
+# Run composer updates.
+sudo composer update
+cd html
+sudo composer update
+cd modules/custom/vmenu
 
 # Update local custom module repository from GitHub.
 sudo git stash
