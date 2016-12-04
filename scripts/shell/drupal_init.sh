@@ -16,13 +16,13 @@
 #     - example.org
 
 # Check for updates, install dependencies, then check for updates again.
-sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/master/shell/install_deps.sh
+sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/master/scripts/shell/install_deps.sh
 sudo chmod 755 install_deps.sh
 sudo ./install_deps.sh
 sudo rm -f install_deps.sh
 
 # Drop all default Drupal tables from MySQL/MariaDB.
-sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/master/sql/drop_all_default_drupal_tables.sql
+sudo wget https://raw.githubusercontent.com/Dyndrilliac/cen-4010-assignments/master/scripts/sql/drop_all_default_drupal_tables.sql
 sudo mysql -u drupal -p drupal < drop_all_default_drupal_tables.sql
 sudo rm -f drop_all_default_drupal_tables.sql
 
@@ -46,7 +46,6 @@ sudo composer require drupal/devel
 sudo composer require drupal/ds
 sudo composer require drupal/google_analytics
 sudo composer require drupal/layout_plugin
-sudo composer require drupal/openrestaurant
 sudo composer require drupal/page_manager
 sudo composer require drupal/panels
 sudo composer require drupal/pathauto
@@ -56,8 +55,6 @@ sudo composer require drupal/search_api
 sudo composer require drupal/token
 sudo composer require drupal/ubercart
 sudo composer require drupal/vcl
-#sudo composer require drupal/backup_migrate
-#sudo composer require drupal/entity
 sudo composer require drupal/bootstrap
 
 # Download and unpack libraries needed by modules.
