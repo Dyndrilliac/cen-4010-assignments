@@ -9,7 +9,6 @@
 sudo wget https://raw.githubusercontent.com/Dyndrilliac/linux-shell-scripts/master/update.sh
 sudo chmod 755 update.sh
 sudo ./update.sh
-sudo rm -f update.sh
 
 # Install zip archive extraction tool.
 sudo apt install unzip
@@ -20,7 +19,7 @@ sudo apt-get install jq
 # Install PHP 7.x dev tools.
 sudo apt-get install php7.0-dev
 
-# Install Composer dependency manager.
+# Install Composer PHP dependency manager.
 EXPECTED_SIGNATURE=$(sudo wget -q -O - https://composer.github.io/installer.sig)
 sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 ACTUAL_SIGNATURE=$(sudo php -r "echo hash_file('SHA384', 'composer-setup.php');")
@@ -38,8 +37,6 @@ sudo rm composer-setup.php
 sudo chmod 755 /usr/local/bin/composer
 
 # Run update script.
-sudo wget https://raw.githubusercontent.com/Dyndrilliac/linux-shell-scripts/master/update.sh
-sudo chmod 755 update.sh
 sudo ./update.sh
 sudo rm -f update.sh
 exit $RESULT
