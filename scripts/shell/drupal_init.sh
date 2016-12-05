@@ -73,10 +73,15 @@ sudo echo "\$settings['trusted_host_patterns'] = array(" >> settings.php
 sudo echo "  '^${1//./\\.}\$'," >> settings.php
 sudo echo ");" >> settings.php
 
-# Download and unpack custom modules with git.
+# Update the PHP Filter module manually.
 cd ../../modules
 sudo mkdir custom
-cd custom
+cd contrib
+sudo wget https://ftp.drupal.org/files/projects/php-8.x-1.0-beta2.tar.gz
+sudo sudo tar -xvzf php-8.x-1.0-beta2.tar.gz
+
+# Download and unpack custom modules with git.
+cd ../custom
 sudo git clone https://github.com/Dyndrilliac/cen-4010-assignments.git vmenu
 
 # Copy custom theme from module directory.
