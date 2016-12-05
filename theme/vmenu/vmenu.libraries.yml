@@ -1,15 +1,3 @@
-global-styling:
-  css:
-    layout:
-      css/style.css: {preprocess: false}
-      'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css': {type: external}
-
-global-scripting:
-  js:
-    js/main.js: {preprocess: false}
-  dependencies:
-    - core/jquery
-
 bootstrap-scripts:
   js:
     bootstrap/js/affix.js: {}
@@ -24,3 +12,15 @@ bootstrap-scripts:
     bootstrap/js/scrollspy.js: {}
     bootstrap/js/tab.js: {}
     bootstrap/js/transition.js: {}
+
+global-scripting:
+  js:
+    js/main.js: {preprocess: false}
+  dependencies:
+    - core/jquery
+
+global-styling:
+  css:
+    layout:
+      css/style.css: {preprocess: false}
+      'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css': {type: external}

@@ -20,8 +20,8 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
-  - vmenu/global-styling
-  - vmenu/global-scripting
   - vmenu/bootstrap-scripts
+  - vmenu/global-scripting
+  - vmenu/global-styling
 
 stylesheets-remove:
