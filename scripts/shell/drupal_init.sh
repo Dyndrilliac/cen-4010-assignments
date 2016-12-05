@@ -79,6 +79,7 @@ sudo mkdir custom
 cd contrib
 sudo wget https://ftp.drupal.org/files/projects/php-8.x-1.0-beta2.tar.gz
 sudo sudo tar -xvzf php-8.x-1.0-beta2.tar.gz
+sudo rm -f php-8.x-1.0-beta2.tar.gz
 
 # Download and unpack custom modules with git.
 cd ../custom
