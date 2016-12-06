@@ -60,41 +60,20 @@
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
   {% block navbar %}
-    {%
-      set navbar_classes = [
-        'navbar',
-        theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-		'navigation-clean-search',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
-      ]
-    %}
-    <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
-      {% if not navbar_attributes.hasClass('container') %}
-        <div class="{{ container }}">
-      {% endif %}
-      <div class="navbar-header">
-        {{ page.navigation }}
-        {# .btn-navbar is used as the toggle for collapsed navbar content #}
-        {% if page.navigation_collapsible %}
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1">
-            <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        {% endif %}
-      </div>
-
-      {# Navigation (collapsible) #}
-      {% if page.navigation_collapsible %}
-        <div id="navcol-1" class="collapse navbar-collapse">
-          {{ page.navigation_collapsible }}
-        </div>
-      {% endif %}
-      {% if not navbar_attributes.hasClass('container') %}
-        </div>
-      {% endif %}
-    </header>
+    <div>
+        <nav class="navbar navbar-default navigation-clean-search">
+            <div class="container">
+                <div class="navbar-header"><a class="navbar-brand navbar-link" href="http://139.62.210.134/">Digital Diner</a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li role="presentation"><a class="text-uppercase" href="#">Orders</a></li>
+                        <li role="presentation"><a class="text-uppercase" href="#">Reports</a></li>
+                    </ul><a class="btn btn-default navbar-btn navbar-right action-button" role="button" href="#">Register</a><a class="btn btn-default navbar-btn navbar-right action-button" role="button" href="#">Log In</a></div>
+            </div>
+        </nav>
+    </div>
   {% endblock %}
 {% endif %}
 
@@ -181,8 +160,19 @@
 
 {% if page.footer %}
   {% block footer %}
-    <footer class="footer {{ container }}" role="contentinfo">
-      {{ page.footer }}
-    </footer>
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <section id="legal" class="legal">
+                <ul class="list-inline">
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
+                </ul>
+                <div id="disclaimer" class="disclaimer"><small>All users of our services agree to be bound by our <a href="/terms">Terms of Service</a> and subject to our <a href="/privacy">Privacy Policy</a>.</small></div>
+                <div id="copyright" class="copyright"><small>© 2016 V-Menu. All rights reserved.</small></div>
+            </section>
+        </footer>
+    </div>
   {% endblock %}
 {% endif %}
