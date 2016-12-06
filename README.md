@@ -7,8 +7,14 @@
 
 *******************************************************************
 
+# Description
+
 The goal of this project is to design, implement, test, publish, and maintain an efficient restaurant management sub-system module for the web-based Drupal content management system (CMS).
 
 This code is mirrored on the following repository hosts:
 * [Drupal.org](https://www.drupal.org/sandbox/Dyndrilliac/2798295)
 * [GitHub.com](https://github.com/Dyndrilliac/cen-4010-assignments)
+
+# Demo
+
+Click [here](http://139.62.210.134/) for a live demonstration.
