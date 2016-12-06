@@ -1,14 +1,15 @@
 global-scripting:
   js:
-    'https://cdn.jsdelivr.net/swiper/3.3.1/swiper.jquery.min.js': {type: external}
+    'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js': {type: external}
+    'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js': {type: external}
+    'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js': {type: external}
     js/scripts.min.js: {preprocess: false}
-  dependencies:
-    - core/jquery
 
 global-styling:
   css:
     layout:
-      'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css': {type: external}
+      'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css': {type: external}
+      'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css': {type: external}
       'https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css': {type: external}
-      'https://cdn.jsdelivr.net/swiper/3.3.1/swiper.min.css': {type: external}
+      'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css': {type: external}
       css/styles.min.css: {preprocess: false}
